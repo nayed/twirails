@@ -1,1 +1,10 @@
-<h1>Twirails home<h1>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Twirails</title>
+  </head>
+  <body>
+    <h1>Twirails home<h1>
+  </body>
+</html>
