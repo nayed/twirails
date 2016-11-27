@@ -1,6 +1,10 @@
 language: ruby
+sudo: false
 rvm:
-  - 2.2.6
   - 2.3.3
-  - ruby-head
+branches:
+  only:
+    - master
 bundler_args: --without production
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
